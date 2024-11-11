@@ -13,7 +13,8 @@ interface CoinMarketData {
 }
 
 export default function CoinMarket() {
-  const API_KEY = "cbf0f3f97818cf5b45e151d54750bcf3";
+  const API_KEY = process.env.NEXT_PUBLIC_COIN_API_KEY;
+
   const [data, setData] = useState<CoinMarketData | null>(null);
 
   useEffect(() => {
