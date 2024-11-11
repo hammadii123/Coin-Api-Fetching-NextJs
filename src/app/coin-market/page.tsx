@@ -18,7 +18,8 @@ export default function CoinMarket() {
   const [data, setData] = useState<CoinMarketData | null>(null);
 
   useEffect(() => {
-    fetch(`http://api.coinlayer.com/live?access_key=${API_KEY}`)
+    fetch(`https://api.coinlayer.com/live?access_key=${API_KEY}`)
+
       .then((response) => response.json())
       .then((jsonConverted: CoinMarketData) => {
         console.log("JSON Converted Data: ", jsonConverted);
